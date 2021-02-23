@@ -1,6 +1,6 @@
 from telegram.ext import CommandHandler
 from Configurations.config import CURRENCY
-from Keyboards.CurrencyKeabord import commandMarkup
+from Keyboards.CurrencyKeybord import commandMarkup
 
 
 def currencyCommandHandler()-> CommandHandler:

@@ -3,7 +3,6 @@ from Configurations.config import CURRENCY
 from Handlers.CommandHandlers.BaseCommandHandler import menuCommandHandler
 from Handlers.CommandHandlers.CurrencyCommandHandler import currency
 from Keyboards.CurrencyKeabord import toolsMarkup, stocksMarkup
-from Keyboards.CompanyKeyboards import sectorMarkup
 
 
 def currencyConversationHandler()-> ConversationHandler:
@@ -22,14 +21,14 @@ def currencyConversationHandler()-> ConversationHandler:
 
 
 def mosCurrency(bot, update)-> int:
-    #tools(bot)
-    sector(bot)
+    tools(bot)
     return CURRENCY
 
 def back(bot, update)-> int:
     print("back")
     currency(bot, update)
     return CURRENCY
+
 
 def spbCurrency(bot, update)-> int:
     tools(bot)
@@ -49,12 +48,5 @@ def stocks(bot, update)-> int:
                            "\nСбербанк(SBER) стоит 40 гривен.\n"
                            "Изменение за сегодня -3%"
                            , reply_markup=stocksMarkup())
-    return CURRENCY
-
-
-def sector(bot):
-    bot.message.reply_text('Введи название интересующей тебя компании.\n\n'
-                           'Если хочешь узнать какие компании размещают финансовые инструменты,выбирай отрасль',
-                           reply_markup=sectorMarkup())
     return CURRENCY
 

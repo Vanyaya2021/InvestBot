@@ -3,13 +3,12 @@ from DB.Models.User import User
 import uuid, datetime
 
 
+
 def createUser(bot):
     user = User
     user.id = uuid.uuid4()
     user.chat_id = bot.message.chat.id
-    if bot.message.chat.username == None:
-        user.username = bot.message.chat.first_name
-    user.username = '@'+bot.message.chat.username
+    user.username = bot.message.chat.username
     user.first_name = bot.message.chat.first_name
     user.last_name = bot.message.chat.last_name
     user.join_date = datetime.datetime.now(tz = datetime.timezone.utc)
@@ -17,3 +16,4 @@ def createUser(bot):
               "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')".format(user.id, user.chat_id, user.username,user.first_name,
                                                                      user.last_name,user.join_date))
     return result
+
