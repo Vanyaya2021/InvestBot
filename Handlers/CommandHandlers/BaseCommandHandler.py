@@ -2,8 +2,9 @@ from telegram import (
     ReplyKeyboardRemove)
 from telegram.ext import CommandHandler
 from DB.Queries.userQuery import createUser
-from StaticMessages import menu_message, welcome_message
+from StaticMessages import menu_message, welcome_message, start_message, start_help_message
 from Configurations.config import ABOUT_COMMANDS
+from Keyboards.Inline.WelcomeKeyboard import getFirstStepOfHelp
 
 def startCommandHandler() -> CommandHandler:
     handler = CommandHandler(
@@ -26,17 +27,15 @@ def menuCommandHandler() -> CommandHandler:
     return handler
 
 
-def helpCommand(bot,update):
-    bot.message.reply_text(menu_message)
+def helpCommand(bot,update) -> int:
+    bot.message.reply_text(start_help_message, reply_markup = getFirstStepOfHelp())
     return ABOUT_COMMANDS
 
 
 def startCommand(bot, update):
     res = createUser(bot)
-    print(res)
-    bot.message.reply_text(
-        "Привет, я знаю много о финансах и могу поделиться актуальной информацией с тобой. Пройди обучение как со мной работать"
-        "по команде /help или сразу переходи в интересующий раздел")
+    print(bot)
+    bot.message.reply_text(start_message)
     bot.message.reply_text(menu_message)
 
 

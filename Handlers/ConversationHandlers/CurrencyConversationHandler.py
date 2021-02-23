@@ -5,7 +5,7 @@ from Handlers.CommandHandlers.CurrencyCommandHandler import currency
 from Keyboards.CurrencyKeybord import toolsMarkup, stocksMarkup
 
 
-def currencyConversationHandler()-> ConversationHandler:
+def currencyConversationHandler() -> ConversationHandler:
     handler = ConversationHandler(
         entry_points=[CommandHandler('actualCurrency', currency)],
         states={
