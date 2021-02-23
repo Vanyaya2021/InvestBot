@@ -2,7 +2,8 @@ from telegram import (
     ReplyKeyboardRemove)
 from telegram.ext import CommandHandler
 from DB.Queries.userQuery import createUser
-
+from StaticMessages import menu_message, welcome_message
+from Configurations.config import ABOUT_COMMANDS
 
 def startCommandHandler() -> CommandHandler:
     handler = CommandHandler(
@@ -26,36 +27,19 @@ def menuCommandHandler() -> CommandHandler:
 
 
 def helpCommand(bot,update):
-    bot.message.reply_text("Я оперативно даю актуальную информацию о мире финансов."
-                           "\nОзнакомиться с моими командами можешь ниже \n"
-                           "\n/actualCurrency - Актуальные котировки"
-                           "\n/companies - Компании на бирже"
-                           "\n/news - Главные новости в мире финансов"
-                           "\n/analytics - Аналитика и прогнозы"
-                           "\n/teachMe - Обучу тебя основам финансовой грамотности"
-                           "\n/myOffice - Твой личный кабинет"
-                           "\n/menu - Переходи в меню"
-                           "\n/help - Помогу разобраться тебе как я работаю"
-                           "\n/start - Приветствие")
+    bot.message.reply_text(menu_message)
+    return ABOUT_COMMANDS
 
 
 def startCommand(bot, update):
     res = createUser(bot)
     print(res)
     bot.message.reply_text(
-        'Привет, я знаю много о финансах и могу поделиться актуальной информацией с тобой')
-    bot.message.reply_text('Давай я познакомлю тебя с тем, что умею. Жми /help')
+        "Привет, я знаю много о финансах и могу поделиться актуальной информацией с тобой. Пройди обучение как со мной работать"
+        "по команде /help или сразу переходи в интересующий раздел")
+    bot.message.reply_text(menu_message)
 
 
 def menu(bot, update):
-    bot.message.reply_text("Я оперативно даю актуальную информацию о мире финансов."
-                           "\nОзнакомиться с моими командами можешь ниже \n"
-                           "\n/actualCurrency - Актуальные котировки"
-                           "\n/companies - Компании на бирже"
-                           "\n/news - Главные новости в мире финансов"
-                           "\n/analytics - Аналитика и прогнозы"
-                           "\n/teachMe - Обучу тебя основам финансовой грамотности"
-                           "\n/myOffice - Твой личный кабинет"
-                           "\n/help - Помогу разобраться тебе как я работаю"
-                           , reply_markup=ReplyKeyboardRemove())
+    bot.message.reply_text(welcome_message+menu_message, reply_markup=ReplyKeyboardRemove())
 

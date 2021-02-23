@@ -6,3 +6,6 @@ dbUser = 'botowner'
 dbPassword = 'botowner12345'
 dbPort = '5432'
 dbName = 'botdb'
+
+# этапы разговора по инсрукции бота /help
+ABOUT_COMMANDS, ABOUT_KEYBOARD = range(2)
