@@ -2,7 +2,7 @@ from telegram.ext import ConversationHandler, CommandHandler, MessageHandler, Fi
 from Configurations.config import CURRENCY
 from Handlers.CommandHandlers.BaseCommandHandler import menuCommandHandler
 from Handlers.CommandHandlers.CurrencyCommandHandler import currency
-from Keyboards.CurrencyKeabord import toolsMarkup, stocksMarkup
+from Keyboards.CurrencyKeybord import toolsMarkup, stocksMarkup
 
 
 def currencyConversationHandler()-> ConversationHandler:

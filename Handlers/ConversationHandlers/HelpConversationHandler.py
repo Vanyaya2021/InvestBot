@@ -21,6 +21,7 @@ def helpConversationHandler() -> ConversationHandler:
 
 def aboutCommands(bot, update) -> int:
     chatId = bot.callback_query.message.chat.id
+    print(chatId)
     img = open("Static/WelcomePictures/aboutCommands.jpg",'rb')
     update.bot.sendPhoto(chatId,img,help_about_commands_message, reply_markup=getSecondStepOfHelp(), parse_mode="Markdown")
     return ABOUT_KEYBOARD
