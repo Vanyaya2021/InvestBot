@@ -30,7 +30,11 @@ def getUserByChatId(userChatId):
 
 def getUserAssets(userChatId):
     user = getUserByChatId(userChatId)
-    result = db.query("SELECT * FROM botdb.public.user_assets_t WHERE user_id ='{0}'".format(user.id))
+    result = db.query("SELECT user_id,ticker_id,name,description,ticker_type,"
+                      "ticker_amount,book_value,actual_price,last_trading_day_price, "
+                      "is_favorite from botdb.public.user_assets_t a "
+                      "JOIN botdb.public.ticker_t b  "
+                      "ON a.ticker_id = b.id WHERE user_id ='{0}'".format(user.id))
     return result
 
 
