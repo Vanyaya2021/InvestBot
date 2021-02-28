@@ -1,0 +1,3 @@
+2021-02-28 19:29:17,389 - INFO - Scheduler started
+2021-02-28 19:29:41,054 - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-28 19:29:41,054 - INFO - Scheduler has been shut down
