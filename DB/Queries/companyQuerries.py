@@ -7,5 +7,4 @@ def getSectors():
         getSectorLst.append(rec[i][0])
     return(getSectorLst)
 
-#print(getSectors())
 
