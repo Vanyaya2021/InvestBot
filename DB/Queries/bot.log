@@ -1,0 +1,132 @@
+2021-02-28 22:52:58,342 - ERROR - ERROR:  syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+
+2021-02-28 22:53:35,725 - ERROR - ERROR:  syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+
+2021-02-28 22:57:36,235 - ERROR - ERROR:  syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+
+2021-02-28 23:00:09,590 - ERROR - ERROR:  syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "acdcaa4"
+LINE 1: ...* FROM botdb.public.user_assets_t WHERE user_id =7acdcaa4-d3...
+                                                             ^
+
+2021-02-28 23:00:19,385 - ERROR - ERROR:  syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+
+2021-02-28 23:00:38,225 - ERROR - ERROR:  syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+
+2021-02-28 23:02:12,821 - ERROR - ERROR:  syntax error at or near "c1bae9"
+LINE 1: ...LECT * FROM public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "c1bae9"
+LINE 1: ...LECT * FROM public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+
+2021-02-28 23:02:35,389 - ERROR - ERROR:  syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+
+2021-02-28 23:05:04,189 - ERROR - ERROR:  syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+
+2021-02-28 23:05:40,078 - ERROR - ERROR:  syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+
+2021-02-28 23:06:10,489 - ERROR - ERROR:  syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.SyntaxError: syntax error at or near "c1bae9"
+LINE 1: ... FROM botdb.public.user_assets_t WHERE user_id =45c1bae9-f2e...
+                                                             ^
+

@@ -5,7 +5,7 @@ from Keyboards.CurrencyKeybord import commandMarkup
 
 def currencyCommandHandler()-> CommandHandler:
     handler = CommandHandler(
-        command= "actualCurrency",
+        command= "actual_currency",
         callback= currency)
     return handler
 
