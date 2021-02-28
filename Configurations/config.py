@@ -9,3 +9,6 @@ dbName = 'botdb'
 
 # этапы разговора по инсрукции бота /help
 ABOUT_COMMANDS, ABOUT_KEYBOARD, TO_MENU = range(3)
+
+# этапы разговора в личном кабинете пользователя
+CHOOSE_OFFICE_SECTION = range(1)

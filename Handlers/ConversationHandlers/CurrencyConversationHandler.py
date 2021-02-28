@@ -7,7 +7,7 @@ from Keyboards.CurrencyKeybord import toolsMarkup, stocksMarkup
 
 def currencyConversationHandler()-> ConversationHandler:
     handler = ConversationHandler(
-        entry_points=[CommandHandler('actualCurrency', currency),
+        entry_points=[CommandHandler('actual_currency', currency),
                       MessageHandler(Filters.regex('^(Актуальные котировки)$'), currency)],
         states={
             CURRENCY: [MessageHandler(Filters.regex('^(Российский рынок|российские|Российские)$'), mosCurrency),

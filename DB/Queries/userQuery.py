@@ -17,3 +17,25 @@ def createUser(bot):
                                                                      user.last_name,user.join_date))
     return result
 
+def getUserByChatId(userChatId):
+    result = db.query("SELECT * FROM botdb.public.user_t WHERE chat_id ={}".format(userChatId))
+    user = User
+    user.id = result[0][0]
+    user.chat_id = result[0][1]
+    user.username = result[0][2]
+    user.first_name = result[0][3]
+    user.last_name = result[0][4]
+    user.join_date = result[0][5]
+    return user
+
+def getUserAssets(userChatId):
+    user = getUserByChatId(userChatId)
+    result = db.query("SELECT * FROM botdb.public.user_assets_t WHERE user_id ='{0}'".format(user.id))
+    return result
+
+
+
+
+
+
+
