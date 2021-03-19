@@ -7,7 +7,7 @@ from Handlers.ConversationHandlers.OfiiceConversationHandler import officeConver
 
 
 def main() -> None:
-    my_bot = Updater(config.token, config.url, use_context=True)
+    my_bot = Updater(config.token, use_context=True)
 
     my_bot.dispatcher.add_handler(startCommandHandler(),2)
 

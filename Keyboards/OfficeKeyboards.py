@@ -10,7 +10,13 @@ def sectionsMarkup():
     markup = ReplyKeyboardMarkup(buttons, one_time_keyboard=True, resize_keyboard=True)
     return markup
 
-def infoAboutAssetsKeyboard():
-    inline_btn_1 = InlineKeyboardButton(text ='Активы', callback_data='assets')
-    keyboard = InlineKeyboardMarkup([[inline_btn_1]])
-    return keyboard
+def infoAboutAssetsKeyboard(userAssets):
+    if len(userAssets)<=3:
+        keyboard = InlineKeyboardMarkup([[]])
+        return keyboard
+    else:
+        #inline_btn_1 = InlineKeyboardButton(text='Назад', callback_data='back_asset')
+        inline_btn_1 = InlineKeyboardButton(text='Далее', callback_data='next_asset')
+        #inline_btn_3 = InlineKeyboardButton(text ='График', callback_data='assets_graph')
+        keyboard = InlineKeyboardMarkup([[inline_btn_1]])
+        return keyboard
