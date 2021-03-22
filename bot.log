@@ -2036,3 +2036,300 @@ telegram.error.BadRequest: Message text is empty
 2021-03-19 13:24:05,311 - INFO - Received signal 2 (SIGINT), stopping...
 2021-03-19 13:24:05,311 - INFO - Scheduler has been shut down
 2021-03-19 13:24:08,369 - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-03-22 21:03:07,272 - INFO - Scheduler started
+2021-03-22 21:03:32,125 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:03:32,125 - INFO - Scheduler has been shut down
+2021-03-22 21:04:06,383 - INFO - Scheduler started
+2021-03-22 21:04:33,726 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:04:33,726 - INFO - Scheduler has been shut down
+2021-03-22 21:05:08,390 - INFO - Scheduler started
+2021-03-22 21:05:31,755 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:05:31,755 - INFO - Scheduler has been shut down
+2021-03-22 21:05:42,061 - INFO - Scheduler started
+2021-03-22 21:06:03,622 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:06:03,623 - INFO - Scheduler has been shut down
+2021-03-22 21:16:39,763 - INFO - Scheduler started
+2021-03-22 21:16:55,917 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:16:55,917 - INFO - Scheduler has been shut down
+2021-03-22 21:17:52,506 - INFO - Scheduler started
+2021-03-22 21:18:02,903 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:18:02,903 - INFO - Scheduler has been shut down
+2021-03-22 21:21:00,131 - INFO - Scheduler started
+2021-03-22 21:21:45,567 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:21:45,567 - INFO - Scheduler has been shut down
+2021-03-22 21:22:09,076 - INFO - Scheduler started
+2021-03-22 21:22:53,154 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:22:53,154 - INFO - Scheduler has been shut down
+2021-03-22 21:30:23,102 - INFO - Scheduler started
+2021-03-22 21:30:50,892 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:30:50,892 - INFO - Scheduler has been shut down
+2021-03-22 21:31:36,866 - INFO - Scheduler started
+2021-03-22 21:31:54,493 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:31:54,493 - INFO - Scheduler has been shut down
+2021-03-22 21:33:49,627 - INFO - Scheduler started
+2021-03-22 21:34:08,933 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:34:08,934 - INFO - Scheduler has been shut down
+2021-03-22 21:34:23,405 - INFO - Scheduler started
+2021-03-22 21:34:30,710 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 517, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+  File "/Users/a18850286/PycharmProjects/InvestBot/Handlers/CallBackQueryHandlers/paginationCallbackQueryHandler.py", line 15, in nextPage
+    update.bot.editMessageText(message,chatId,messageId,"Markdown",)
+  File "<decorator-gen-27>", line 2, in edit_message_text
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 135, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2362, in edit_message_text
+    return self._message(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 281, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 245, in _post
+    return self.request.post(f'{self.base_url}/{endpoint}', data=data, timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 349, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 272, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+2021-03-22 21:34:59,852 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:34:59,853 - INFO - Scheduler has been shut down
+2021-03-22 21:37:01,067 - INFO - Scheduler started
+2021-03-22 21:37:25,724 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:37:25,724 - INFO - Scheduler has been shut down
+2021-03-22 21:38:05,883 - INFO - Scheduler started
+2021-03-22 21:38:50,046 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:38:50,047 - INFO - Scheduler has been shut down
+2021-03-22 21:39:36,190 - INFO - Scheduler started
+2021-03-22 21:40:55,494 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:40:55,495 - INFO - Scheduler has been shut down
+2021-03-22 21:46:15,479 - INFO - Scheduler started
+2021-03-22 21:47:12,174 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:47:12,174 - INFO - Scheduler has been shut down
+2021-03-22 21:48:19,838 - INFO - Scheduler started
+2021-03-22 21:49:26,482 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:49:26,482 - INFO - Scheduler has been shut down
+2021-03-22 21:49:35,079 - INFO - Scheduler started
+2021-03-22 21:49:43,239 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 517, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+  File "/Users/a18850286/PycharmProjects/InvestBot/Handlers/CallBackQueryHandlers/paginationCallbackQueryHandler.py", line 15, in nextPage
+    update.bot.editMessageText(message,chatId,messageId)
+  File "<decorator-gen-27>", line 2, in edit_message_text
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 135, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2362, in edit_message_text
+    return self._message(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 281, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 245, in _post
+    return self.request.post(f'{self.base_url}/{endpoint}', data=data, timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 349, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 272, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+2021-03-22 21:51:44,251 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:51:44,251 - INFO - Scheduler has been shut down
+2021-03-22 21:51:47,215 - INFO - Scheduler started
+2021-03-22 21:52:04,321 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 21:52:04,321 - INFO - Scheduler has been shut down
+2021-03-22 22:18:46,322 - INFO - Scheduler started
+2021-03-22 22:19:25,281 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:19:25,281 - INFO - Scheduler has been shut down
+2021-03-22 22:19:35,882 - INFO - Scheduler started
+2021-03-22 22:20:48,843 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:20:48,843 - INFO - Scheduler has been shut down
+2021-03-22 22:21:13,201 - INFO - Scheduler started
+2021-03-22 22:21:33,213 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:21:33,213 - INFO - Scheduler has been shut down
+2021-03-22 22:23:16,917 - INFO - Scheduler started
+2021-03-22 22:23:28,387 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+TypeError: 'NoneType' object is not callable
+2021-03-22 22:23:29,710 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+TypeError: 'NoneType' object is not callable
+2021-03-22 22:23:34,146 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+TypeError: 'NoneType' object is not callable
+2021-03-22 22:23:53,728 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+TypeError: 'NoneType' object is not callable
+2021-03-22 22:24:07,816 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:24:07,817 - INFO - Scheduler has been shut down
+2021-03-22 22:27:12,980 - INFO - Scheduler started
+2021-03-22 22:27:53,867 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:27:53,867 - INFO - Scheduler has been shut down
+2021-03-22 22:31:26,541 - INFO - Scheduler started
+2021-03-22 22:31:50,096 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:31:50,096 - INFO - Scheduler has been shut down
+2021-03-22 22:32:07,090 - INFO - Scheduler started
+2021-03-22 22:32:17,367 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:32:17,367 - INFO - Scheduler has been shut down
+2021-03-22 22:32:34,483 - INFO - Scheduler started
+2021-03-22 22:32:54,325 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:32:54,325 - INFO - Scheduler has been shut down
+2021-03-22 22:35:42,203 - INFO - Scheduler started
+2021-03-22 22:35:55,392 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:35:55,392 - INFO - Scheduler has been shut down
+2021-03-22 22:37:11,136 - INFO - Scheduler started
+2021-03-22 22:37:19,531 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 517, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+  File "/Users/a18850286/PycharmProjects/InvestBot/Handlers/CallBackQueryHandlers/paginationCallbackQueryHandler.py", line 29, in backPage
+    update.bot.editMessageText(message,chatId,messageId)
+  File "<decorator-gen-27>", line 2, in edit_message_text
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 135, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2362, in edit_message_text
+    return self._message(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 281, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 245, in _post
+    return self.request.post(f'{self.base_url}/{endpoint}', data=data, timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 349, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 272, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+2021-03-22 22:38:04,690 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:38:04,690 - INFO - Scheduler has been shut down
+2021-03-22 22:38:12,296 - INFO - Scheduler started
+2021-03-22 22:38:25,917 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:38:25,918 - INFO - Scheduler has been shut down
+2021-03-22 22:39:36,653 - INFO - Scheduler started
+2021-03-22 22:39:54,103 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:39:54,103 - INFO - Scheduler has been shut down
+2021-03-22 22:52:50,812 - INFO - Scheduler started
+2021-03-22 22:53:13,385 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:53:13,385 - INFO - Scheduler has been shut down
+2021-03-22 22:54:02,132 - INFO - Scheduler started
+2021-03-22 22:54:51,524 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:54:51,525 - INFO - Scheduler has been shut down
+2021-03-22 22:55:44,426 - INFO - Scheduler started
+2021-03-22 22:56:14,416 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:56:14,416 - INFO - Scheduler has been shut down
+2021-03-22 22:57:22,156 - INFO - Scheduler started
+2021-03-22 22:58:12,792 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 22:58:12,792 - INFO - Scheduler has been shut down
+2021-03-22 22:59:24,490 - INFO - Scheduler started
+2021-03-22 23:00:50,252 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:00:50,252 - INFO - Scheduler has been shut down
+2021-03-22 23:09:45,994 - INFO - Scheduler started
+2021-03-22 23:10:00,700 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:10:00,700 - INFO - Scheduler has been shut down
+2021-03-22 23:11:07,022 - INFO - Scheduler started
+2021-03-22 23:12:44,877 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:12:44,877 - INFO - Scheduler has been shut down
+2021-03-22 23:12:53,115 - INFO - Scheduler started
+2021-03-22 23:13:04,714 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:13:04,714 - INFO - Scheduler has been shut down
+2021-03-22 23:19:24,241 - INFO - Scheduler started
+2021-03-22 23:19:32,266 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 517, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+  File "/Users/a18850286/PycharmProjects/InvestBot/Handlers/CallBackQueryHandlers/paginationCallbackQueryHandler.py", line 15, in nextPage
+    listOfNextAssets = getUserAssets()
+TypeError: getUserAssets() missing 2 required positional arguments: 'userChatId' and 'page'
+2021-03-22 23:20:17,713 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:20:17,713 - INFO - Scheduler has been shut down
+2021-03-22 23:20:24,189 - INFO - Scheduler started
+2021-03-22 23:20:32,920 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:20:32,920 - INFO - Scheduler has been shut down
+2021-03-22 23:21:31,505 - INFO - Scheduler started
+2021-03-22 23:21:40,102 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:21:40,102 - INFO - Scheduler has been shut down
+2021-03-22 23:23:52,544 - INFO - Scheduler started
+2021-03-22 23:23:59,382 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 432, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 517, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/handler.py", line 156, in handle_update
+    return self.callback(update, context)
+  File "/Users/a18850286/PycharmProjects/InvestBot/Handlers/CallBackQueryHandlers/paginationCallbackQueryHandler.py", line 17, in nextPage
+    userAssets = getUserAssets(chatId, page)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/userQuery.py", line 39, in getUserAssets
+    list = result[(page-1)*pageSize:page*pageSize]
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+2021-03-22 23:24:15,080 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:24:15,080 - INFO - Scheduler has been shut down
+2021-03-22 23:27:19,988 - INFO - Scheduler started
+2021-03-22 23:27:30,871 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:27:30,871 - INFO - Scheduler has been shut down
+2021-03-22 23:28:51,438 - INFO - Scheduler started
+2021-03-22 23:30:17,611 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:30:17,611 - INFO - Scheduler has been shut down
+2021-03-22 23:30:24,068 - INFO - Scheduler started
+2021-03-22 23:30:48,926 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:30:48,926 - INFO - Scheduler has been shut down
+2021-03-22 23:32:44,918 - INFO - Scheduler started
+2021-03-22 23:34:14,781 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:34:14,782 - INFO - Scheduler has been shut down
+2021-03-22 23:35:04,989 - INFO - Scheduler started
+2021-03-22 23:45:11,314 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:45:11,314 - INFO - Scheduler has been shut down
+2021-03-22 23:45:22,684 - INFO - Scheduler started
+2021-03-22 23:46:01,902 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:46:01,902 - INFO - Scheduler has been shut down
+2021-03-22 23:46:13,871 - INFO - Scheduler started
+2021-03-22 23:49:24,410 - ERROR - ERROR:  duplicate key value violates unique constraint "chat_id"
+DETAIL:  Key (chat_id)=(550666260) already exists.
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "chat_id"
+DETAIL:  Key (chat_id)=(550666260) already exists.
+
+2021-03-22 23:49:50,583 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:49:50,583 - INFO - Scheduler has been shut down
+2021-03-22 23:54:19,929 - INFO - Scheduler started
+2021-03-22 23:54:48,773 - ERROR - ERROR:  duplicate key value violates unique constraint "chat_id"
+DETAIL:  Key (chat_id)=(550666260) already exists.
+Traceback (most recent call last):
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 31, in query
+    records = update_db(conn,sql)
+  File "/Users/a18850286/PycharmProjects/InvestBot/DB/Queries/dbConnection.py", line 21, in update_db
+    cursor.execute(sql)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "chat_id"
+DETAIL:  Key (chat_id)=(550666260) already exists.
+
+2021-03-22 23:55:30,840 - INFO - Received signal 2 (SIGINT), stopping...
+2021-03-22 23:55:30,840 - INFO - Scheduler has been shut down

@@ -28,14 +28,18 @@ def getUserByChatId(userChatId):
     user.join_date = result[0][5]
     return user
 
-def getUserAssets(userChatId):
+def getUserAssets(userChatId, page):
+    pageSize = 4
     user = getUserByChatId(userChatId)
     result = db.query("SELECT user_id,ticker_id,name,description,ticker_type,"
                       "ticker_amount,book_value,actual_price,last_trading_day_price, "
                       "is_favorite from botdb.public.user_assets_t a "
                       "JOIN botdb.public.ticker_t b  "
-                      "ON a.ticker_id = b.id WHERE user_id ='{0}'".format(user.id))
-    return result
+                      "ON a.ticker_id = b.id WHERE user_id ='{0}' order by name asc".format(user.id))
+    list = result[(page-1)*pageSize:page*pageSize]
+    if page == 0:
+        return result #возвращает все активы пользователя
+    return list
 
 
 

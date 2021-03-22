@@ -15,8 +15,6 @@ def infoAboutAssetsKeyboard(userAssets):
         keyboard = InlineKeyboardMarkup([[]])
         return keyboard
     else:
-        #inline_btn_1 = InlineKeyboardButton(text='Назад', callback_data='back_asset')
-        inline_btn_1 = InlineKeyboardButton(text='Далее', callback_data='next_asset')
-        #inline_btn_3 = InlineKeyboardButton(text ='График', callback_data='assets_graph')
+        inline_btn_1 = InlineKeyboardButton(text='➡️ Стр. 2', callback_data='nextPage_2')
         keyboard = InlineKeyboardMarkup([[inline_btn_1]])
         return keyboard
