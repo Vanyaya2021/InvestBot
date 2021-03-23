@@ -20,7 +20,7 @@ def assetsMessage(userAssets):
             tickerChangePrice = "-" + str(tickerChangePrice).replace('-', '')
             percentTickerChange = str(percentTickerChange).replace('-', '')
         lastDayAssetsPrice = lastDayAssetsPrice + tickerAmount * lastDayPrice
-        message = message + "*{0} ({1})* {2}шт, цена {3}₽. " \
+        message = message + "*{0} *(/{1}) {2}шт, цена {3}₽. " \
                             "Изменение за сегодня {4}₽({5}%)\n".format(name,ticker_name,tickerAmount,actualPrice,tickerChangePrice,percentTickerChange)
     return message
 

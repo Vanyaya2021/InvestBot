@@ -4,6 +4,7 @@ from telegram.ext import CommandHandler
 from DB.Queries.userQuery import createUser
 from StaticMessages import menu_message, welcome_message, start_message, start_help_message
 from Configurations.config import ABOUT_COMMANDS
+from Keyboards.General import menuMarkup
 from Keyboards.Inline.WelcomeKeyboard import getFirstStepOfHelp
 
 def startCommandHandler() -> CommandHandler:
@@ -34,9 +35,7 @@ def helpCommand(bot,update) -> int:
 
 def startCommand(bot, update):
     res = createUser(bot)
-    print(bot)
-    bot.message.reply_text(start_message)
-    bot.message.reply_text(menu_message)
+    bot.message.reply_text(start_message,reply_markup = menuMarkup())
 
 
 def menu(bot, update):

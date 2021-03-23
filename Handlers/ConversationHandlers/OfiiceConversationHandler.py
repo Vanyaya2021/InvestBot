@@ -1,6 +1,7 @@
 from telegram.ext import ConversationHandler, MessageHandler, Filters
 from Handlers.CommandHandlers.OfficeCommandHandler import officeCommandHandler
 from Handlers.CommandHandlers.BaseCommandHandler import menuCommandHandler
+from Handlers.CommandHandlers.TickerCommandHandler import tickerCommandHandler
 from DB.Queries.userQuery import getUserAssets
 from Utility.assetCalculation import assetsMessage,generalMessageAboutUsersAssets
 from Keyboards.OfficeKeyboards import infoAboutAssetsKeyboard,sectionsMarkup
@@ -18,7 +19,7 @@ def officeConversationHandler() -> ConversationHandler:
                                     MessageHandler(Filters.regex('^(В меню)$'), toMenu),],
             CHOOSEN_MY_ASSETS:[nextPageCallbackQueryHandler(),backPageCallbackQueryHandler()]
         },
-        fallbacks=[] #нужно будет дописать все возможные выходы из разговора (команды котировок и т.д.)
+        fallbacks=[tickerCommandHandler()] #нужно будет дописать все возможные выходы из разговора (команды котировок и т.д.)
     )
     return handler
 
