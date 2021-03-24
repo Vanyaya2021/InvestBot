@@ -1,5 +1,5 @@
-a
 from DB.Queries.companyQuerries import getSectors
+from telegram import KeyboardButton,ReplyKeyboardMarkup
 
 
 

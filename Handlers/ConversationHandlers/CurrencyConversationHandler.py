@@ -13,7 +13,8 @@ def currencyConversationHandler()-> ConversationHandler:
             CURRENCY: [MessageHandler(Filters.regex('^(Российский рынок|российские|Российские)$'), mosCurrency),
                        MessageHandler(Filters.regex('^(Международный рынок|международные)$'), spbCurrency),
                        MessageHandler(Filters.regex('^(Акции|акции)$'), stocks),
-                       MessageHandler(Filters.regex('^(Назад|назад)$'), back),
+                       MessageHandler(Filters.regex('^(Назад|назад )$'), back),
+                       MessageHandler(Filters.regex('^(Назад в актуальные котировки)$'), currency),
                        ],
         },
         fallbacks=[menuCommandHandler()]
