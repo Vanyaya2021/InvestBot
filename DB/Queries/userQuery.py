@@ -31,15 +31,19 @@ def getUserByChatId(userChatId):
 def getUserAssets(userChatId, page):
     pageSize = 4
     user = getUserByChatId(userChatId)
-    result = db.query("SELECT user_id,ticker_id,name,description,ticker_type,"
-                      "ticker_amount,book_value,actual_price,last_trading_day_price, "
-                      "is_favorite from botdb.public.user_assets_t a "
-                      "JOIN botdb.public.ticker_t b  "
-                      "ON a.ticker_id = b.id WHERE user_id ='{0}' order by name asc".format(user.id))
-    list = result[(page-1)*pageSize:page*pageSize]
+    result = db.query("SELECT a.user_id,a.ticker_id,name,description,ticker_type,ticker_amount,book_value,actual_price,last_trading_day_price, is_favorite "
+                      "FROM botdb.public.user_assets_t a "
+                      "JOIN botdb.public.ticker_t b "
+                      "ON a.ticker_id = b.id "
+                      "LEFT JOIN botdb.public.user_favorite_tickers c "
+                      "ON a.ticker_id = c.ticker_id "
+                      "WHERE a.user_id ='{}' "
+                      "ORDER BY name asc".format(user.id))
+    allPages = len(result)/pageSize
     if page == 0:
-        return result #возвращает все активы пользователя
-    return list
+        return result,allPages #возвращает все активы пользователя
+    else:
+        return result[(page-1)*pageSize:page*pageSize],allPages
 
 
 

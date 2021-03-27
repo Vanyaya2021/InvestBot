@@ -1,5 +1,6 @@
 from telegram import KeyboardButton, ReplyKeyboardMarkup
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from Configurations.config import pageSize
 
 def menuMarkup():
     Button1 = KeyboardButton("Актуальные котировки")
@@ -12,16 +13,19 @@ def menuMarkup():
     markup = ReplyKeyboardMarkup(buttons, one_time_keyboard=True)
     return markup
 
-def paginationKeyboard(currentPage,elementsOnPage):
-    if currentPage == 1:
-        inline_btn_1 = InlineKeyboardButton(text='➡️ Стр. {0}'.format(currentPage+1), callback_data='nextPage_{}'.format(currentPage+1))
-        keyboard = InlineKeyboardMarkup([[inline_btn_1]])
-    elif elementsOnPage<4:
-        inline_btn_1 = InlineKeyboardButton(text='Стр. {0} ⬅️'.format(currentPage - 1),
-                                            callback_data='backPage_{}'.format(currentPage - 1))
+def paginationKeyboard(page, elements_on_page, all_pages):
+    if page == 1:
+        if elements_on_page<pageSize:
+            keyboard = InlineKeyboardMarkup([[]])
+        else:
+            inline_btn_1 = InlineKeyboardButton(text='➡️ Стр. {0}'.format(page + 1), callback_data='nextPage_{}'.format(page + 1))
+            keyboard = InlineKeyboardMarkup([[inline_btn_1]])
+    elif page == all_pages:
+        inline_btn_1 = InlineKeyboardButton(text='Стр. {0} ⬅️'.format(page - 1),
+                                            callback_data='backPage_{}'.format(page - 1))
         keyboard = InlineKeyboardMarkup([[inline_btn_1]])
     else:
-        inline_btn_1 = InlineKeyboardButton(text='Стр. {0} ⬅️'.format(currentPage-1), callback_data='backPage_{}'.format(currentPage-1))
-        inline_btn_2 = InlineKeyboardButton(text='➡️ Стр. {0}'.format(currentPage+1), callback_data='nextPage_{}'.format(currentPage+1))
+        inline_btn_1 = InlineKeyboardButton(text='Стр. {0} ⬅️'.format(page - 1), callback_data='backPage_{}'.format(page - 1))
+        inline_btn_2 = InlineKeyboardButton(text='➡️ Стр. {0}'.format(page + 1), callback_data='nextPage_{}'.format(page + 1))
         keyboard = InlineKeyboardMarkup([[inline_btn_1,inline_btn_2]])
     return keyboard

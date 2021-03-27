@@ -9,23 +9,24 @@ def assetsMessage(userAssets):
         tickerAmount = int(asset[5])
         actualPrice = float(asset[7])
         lastDayPrice = float(asset[8])
+        isFavorite = bool(asset[9])
 
         tickerChangePrice = round(actualPrice - lastDayPrice,3)
         percentTickerChange = round((tickerChangePrice/lastDayPrice)*100,3)
 
-        if tickerChangePrice > 0:
-            tickerChangePrice = "+" + str(tickerChangePrice)
-            percentTickerChange = str(percentTickerChange)
-        else:
-            tickerChangePrice = "-" + str(tickerChangePrice).replace('-', '')
-            percentTickerChange = str(percentTickerChange).replace('-', '')
+        sign = "+" if tickerChangePrice > 0 else "-"
+        favorite = "🌟" if isFavorite == True else ""
+
+        tickerChangePrice = sign + str(tickerChangePrice).replace('-', '')
+        percentTickerChange = sign + str(percentTickerChange).replace('-', '')
+
         lastDayAssetsPrice = lastDayAssetsPrice + tickerAmount * lastDayPrice
-        message = message + "*{0} *(/{1}) {2}шт, цена {3}₽. " \
-                            "Изменение за сегодня {4}₽({5}%)\n".format(name,ticker_name,tickerAmount,actualPrice,tickerChangePrice,percentTickerChange)
+        message = message + "{0}*{1} *(/{2}) {3}шт, цена {4}₽. " \
+                            "Изменение за сегодня {5}₽({6}%)\n".format(favorite,name,ticker_name,tickerAmount,actualPrice,tickerChangePrice,percentTickerChange)
     return message
 
 def generalMessageAboutUsersAssets(chatId):
-    userAllAssets = getUserAssets(chatId,page = 0)
+    userAllAssets,allPages = getUserAssets(chatId, page = 0)
     assetsPrice = 0
     balancedValue = 0
     lastDayAssetsPrice = 0
@@ -41,15 +42,12 @@ def generalMessageAboutUsersAssets(chatId):
 
     changePerDay = round(assetsPrice - lastDayAssetsPrice, 3)
     changePerTime = round(assetsPrice - balancedValue, 3)
-    if changePerDay > 0:
-        changePerDay = "+" + str(changePerDay)
-    else:
-        changePerDay = "-" + str(changePerDay).replace('-', '')
 
-    if changePerTime > 0:
-        changePerTime = "+" + str(changePerTime)
-    else:
-        changePerTime = "-" + str(changePerTime).replace('-', '')
+    signPerDay = "+" if changePerDay > 0 else "-"
+    signPerTime = "+" if changePerTime > 0 else "-"
+
+    changePerDay = signPerDay + str(changePerDay).replace('-', '')
+    changePerTime = signPerTime + str(changePerTime).replace('-', '')
 
     message = "*Рыночная стоимость активов:* {0}₽\n" \
                   "*Изменение за день:* {1}₽\n" \

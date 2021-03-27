@@ -39,5 +39,5 @@ def startCommand(bot, update):
 
 
 def menu(bot, update):
-    bot.message.reply_text(welcome_message+menu_message, reply_markup=ReplyKeyboardRemove())
+    bot.message.reply_text(welcome_message+menu_message, reply_markup=menuMarkup())
 

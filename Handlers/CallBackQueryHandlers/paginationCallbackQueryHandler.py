@@ -16,10 +16,11 @@ def nextPage(bot, update) -> int:
     messageId = bot.callback_query.message.message_id
     callbackData = bot.callback_query.data
     page = int(callbackData.split('_')[1])
-    userAssets = getUserAssets(chatId, page)
+    userAssets,allPages = getUserAssets(chatId, page)
+    elementsOnPage = len(userAssets)
     generalMessage = generalMessageAboutUsersAssets(chatId)
     message = assetsMessage(userAssets)
-    update.bot.editMessageText(generalMessage+message,chatId,messageId,parse_mode = "Markdown", reply_markup = paginationKeyboard(page,len(userAssets)))
+    update.bot.editMessageText(generalMessage+message,chatId,messageId,parse_mode = "Markdown", reply_markup = paginationKeyboard(page,elementsOnPage,allPages))
     return CHOOSEN_MY_ASSETS
 
 def backPageCallbackQueryHandler() -> CallbackQueryHandler:
@@ -33,9 +34,10 @@ def backPage(bot, update) -> int:
     messageId = bot.callback_query.message.message_id
     callbackData = bot.callback_query.data
     page = int(callbackData.split('_')[1])
-    userAssets = getUserAssets(chatId, page)
+    userAssets,allPages = getUserAssets(chatId, page)
+    elementsOnPage = len(userAssets)
     generalMessage = generalMessageAboutUsersAssets(chatId)
     message = assetsMessage(userAssets)
     update.bot.editMessageText(generalMessage + message, chatId, messageId, parse_mode="Markdown",
-                               reply_markup=paginationKeyboard(page, len(userAssets)))
+                               reply_markup=paginationKeyboard(page, elementsOnPage,allPages))
     return CHOOSEN_MY_ASSETS
