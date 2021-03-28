@@ -2,13 +2,15 @@ from telegram.ext import ConversationHandler, MessageHandler, Filters
 from Handlers.CommandHandlers.OfficeCommandHandler import officeCommandHandler
 from Handlers.CommandHandlers.BaseCommandHandler import menu
 from Handlers.CommandHandlers.TickerCommandHandler import tickerCommandHandler
-from DB.Queries.userQuery import getUserAssets
-from Utility.assetCalculation import assetsMessage,generalMessageAboutUsersAssets
-from Keyboards.OfficeKeyboards import sectionsMarkup
 from Handlers.CallBackQueryHandlers.paginationCallbackQueryHandler import nextPageCallbackQueryHandler,backPageCallbackQueryHandler
-from StaticMessages import welcome_office_message
+from Keyboards.OfficeKeyboards import sectionsMarkup
 from Keyboards.General import paginationKeyboard
-from Configurations.config import CHOOSE_OFFICE_SECTION,CHOOSEN_MY_ASSETS
+from Keyboards.Inline.PushNotificationsKeyboards import getPushNotificationKeyboard
+from Handlers.CallBackQueryHandlers.pushNotificationManager import pushPriceCallbackQueryHandler,pushNewsCallbackQueryHandler
+from StaticMessages import welcome_office_message,push_static_message
+from Utility.assetCalculation import assetsMessage,generalMessageAboutUsersAssets
+from DB.Queries.userQuery import getUserAssets,getUserByChatId
+from Configurations.config import CHOOSE_OFFICE_SECTION,CHOOSEN_MY_ASSETS,MANAGE_PUSH
 
 def officeConversationHandler() -> ConversationHandler:
     handler = ConversationHandler(
@@ -20,7 +22,8 @@ def officeConversationHandler() -> ConversationHandler:
                                     MessageHandler(Filters.regex('^(В меню)$'), toMenu)],
             CHOOSEN_MY_ASSETS:[nextPageCallbackQueryHandler(),
                                backPageCallbackQueryHandler(),
-                               MessageHandler(Filters.regex('^(В меню)$'), toMenu)]
+                               MessageHandler(Filters.regex('^(В меню)$'), toMenu)],
+            MANAGE_PUSH:[pushPriceCallbackQueryHandler(),pushNewsCallbackQueryHandler()]
         },
         fallbacks=[tickerCommandHandler()] #нужно будет дописать все возможные выходы из разговора (команды котировок и т.д.)
     )
@@ -41,11 +44,16 @@ def myAssets(bot,update) -> int:
     return CHOOSEN_MY_ASSETS
 
 def myPushNotifications(bot,update) -> int:
-    bot.message.reply_text("Заглушка1")
-    return ConversationHandler.END
+    chatId = bot.message.chat.id
+    user = getUserByChatId(chatId)
+    signPrice = "вкл. ✅" if user.push_price_change == True else "выкл. ❌"
+    signNews = "вкл. ✅" if user.push_news_about_company == True else "выкл. ❌"
+    bot.message.reply_text(push_static_message.format(signPrice, signNews),
+                           reply_markup=getPushNotificationKeyboard(user.push_price_change,user.push_news_about_company))
+    return MANAGE_PUSH
 
 def myAssetsFav(bot,update) -> int:
-    bot.message.reply_text("Заглушка2")
+    bot.message.reply_text("kfmvkldfmvoldfkmv")
     return ConversationHandler.END
 
 def toMenu(bot,update) -> int:

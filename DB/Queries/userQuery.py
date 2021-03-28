@@ -26,6 +26,9 @@ def getUserByChatId(userChatId):
     user.first_name = result[0][3]
     user.last_name = result[0][4]
     user.join_date = result[0][5]
+    user.push_price_change = result[0][6]
+    user.push_news_about_company = result[0][7]
+
     return user
 
 def getUserAssets(userChatId, page):
@@ -45,7 +48,13 @@ def getUserAssets(userChatId, page):
     else:
         return result[(page-1)*pageSize:page*pageSize],allPages
 
-
+def updatePushPrice(userId,push_price_change):
+    sql = "UPDATE botdb.public.user_t SET push_price_change = {0} WHERE id = '{1}'".format(push_price_change,userId)
+    result = db.query(sql)
+def updatePushNews(userId,push_news_about_company):
+    sql = "UPDATE botdb.public.user_t SET push_news_about_company = {0} WHERE id = '{1}'".format(push_news_about_company,userId)
+    print(sql)
+    result = db.query(sql)
 
 
 

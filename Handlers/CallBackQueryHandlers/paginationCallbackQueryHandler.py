@@ -1,5 +1,4 @@
 from telegram.ext import CallbackQueryHandler
-from telegram import ReplyKeyboardMarkup
 from DB.Queries.userQuery import getUserAssets
 from Keyboards.General import paginationKeyboard,menuMarkup
 from Utility.assetCalculation import assetsMessage,generalMessageAboutUsersAssets
