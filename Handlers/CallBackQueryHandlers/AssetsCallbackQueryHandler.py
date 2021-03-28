@@ -1,12 +1,12 @@
 from telegram.ext import CallbackQueryHandler
 from DB.Queries.userQuery import getUserAssets
-from Keyboards.General import paginationKeyboard,menuMarkup
+from Keyboards.General import AssetsPaginationKeyboard,menuMarkup
 from Utility.assetCalculation import assetsMessage,generalMessageAboutUsersAssets
 from Configurations.config import CHOOSEN_MY_ASSETS
 
-def nextPageCallbackQueryHandler() -> CallbackQueryHandler:
+def nextPageOfAssetsCallbackQueryHandler() -> CallbackQueryHandler:
     handler = CallbackQueryHandler(
-        pattern="^nextPage_[+-]?(0|[1-9][0-9]*)$",
+        pattern="^nextPageA_[+-]?(0|[1-9][0-9]*)$",
         callback=nextPage)
     return handler
 
@@ -19,12 +19,12 @@ def nextPage(bot, update) -> int:
     elementsOnPage = len(userAssets)
     generalMessage = generalMessageAboutUsersAssets(chatId)
     message = assetsMessage(userAssets)
-    update.bot.editMessageText(generalMessage+message,chatId,messageId,parse_mode = "Markdown", reply_markup = paginationKeyboard(page,elementsOnPage,allPages))
+    update.bot.editMessageText(generalMessage + message, chatId, messageId, parse_mode = "Markdown", reply_markup = AssetsPaginationKeyboard(page, elementsOnPage, allPages))
     return CHOOSEN_MY_ASSETS
 
-def backPageCallbackQueryHandler() -> CallbackQueryHandler:
+def backPageOfAssetsCallbackQueryHandler() -> CallbackQueryHandler:
     handler = CallbackQueryHandler(
-        pattern="^backPage_[+-]?(0|[1-9][0-9]*)$",
+        pattern="^backPageA_[+-]?(0|[1-9][0-9]*)$",
         callback=backPage)
     return handler
 
@@ -38,5 +38,5 @@ def backPage(bot, update) -> int:
     generalMessage = generalMessageAboutUsersAssets(chatId)
     message = assetsMessage(userAssets)
     update.bot.editMessageText(generalMessage + message, chatId, messageId, parse_mode="Markdown",
-                               reply_markup=paginationKeyboard(page, elementsOnPage,allPages))
+                               reply_markup=AssetsPaginationKeyboard(page, elementsOnPage, allPages))
     return CHOOSEN_MY_ASSETS

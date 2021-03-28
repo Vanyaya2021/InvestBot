@@ -6,7 +6,7 @@ def assetsMessage(userAssets):
     for asset in userAssets:
         ticker_name = asset[1]
         name = asset[2]
-        tickerAmount = int(asset[5])
+        tickerAmount = int(asset[5]) if asset[5] != None else 0
         actualPrice = float(asset[7])
         lastDayPrice = float(asset[8])
         isFavorite = bool(asset[9])

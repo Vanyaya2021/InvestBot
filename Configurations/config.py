@@ -10,7 +10,7 @@ dbName = 'botdb'
 ABOUT_COMMANDS, ABOUT_KEYBOARD, TO_MENU = range(3)
 
 # этапы разговора в личном кабинете пользователя
-CHOOSE_OFFICE_SECTION,CHOOSEN_MY_ASSETS,MANAGE_PUSH= range(3)
+CHOOSE_OFFICE_SECTION,CHOOSEN_MY_ASSETS,CHOOSEN_FAVORITE_ASSETS,MANAGE_PUSH= range(4)
 
 # параметры пагинации для списка активов пользователя
 pageSize = 4
